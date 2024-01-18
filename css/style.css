@@ -1,0 +1,797 @@
+/* 
+   ---------------------------------- css file------------------------------------------------------------
+   ----------------- created by Younes Ait Hajoub at 16/12/2023-------------------------------------------
+*/
+
+
+
+/* ------------------------------ scroll bar style ------------------------------ */
+
+:root {
+    --orange: #f6851c;
+    --bllue: #30adb1;
+    --balck: #1d2020;
+    --white: #fff3ef;
+}
+
+
+
+/* --------------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------ import fonts ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/myFont.ttf);
+}
+
+
+
+/* --------------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.4s;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+    line-height: 1.5;
+    color: var(--balck);
+    cursor: none;
+}
+
+
+
+/* ------------------------------ scroll bar style ------------------------------ */
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--balck);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border-radius: 7px;
+}
+
+
+/* ------------------------------ html element style ------------------------------ */
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    background-color: var(--white);
+    padding-left: 320px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10px 5%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside {
+    position: fixed;
+    width: 320px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--balck);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color2);
+    z-index: 1000000;
+    padding-bottom: 63px;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h1.heading {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    color: var(--orange);
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+span {
+    color: var(--orange);
+}
+
+
+
+/* ------------------------------ aside style ------------------------------ */
+
+aside nav {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+aside nav::-webkit-scrollbar {
+    width: 5px;
+}
+
+aside nav a {
+    font-size: 1.2rem;
+    margin: 7px 0;
+    color: var(--white);
+}
+
+aside nav a:hover {
+    transform: translateX(5px);
+    color: var(--bllue);
+}
+
+
+aside .follow a {
+    font-size: 1.5rem;
+    padding: 0 7px;
+    color: var(--white);
+}
+
+aside .follow a:hover {
+    color: var(--bllue);
+}
+
+aside .languages {
+    position: absolute;
+    bottom: 15px;
+}
+
+aside .languages a {
+    font-size: 1.1rem;
+    padding: 0 15px;
+    color: var(--white);
+}
+
+aside .languages a:hover {
+    color: var(--bllue);
+}
+
+/* -------------home section style ----------------------*/
+
+section.home {
+    padding-top: 45px;
+}
+
+section.home .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section.home .image {
+    flex: 1 1 300px;
+}
+
+section.home .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.home .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 310px;
+    gap: 10px;
+}
+
+/* -------------about section style ----------------------*/
+
+
+#about .row1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 20px;
+    font-size: 1rem;
+}
+
+#about .row1 .image {
+    flex: 1 1 200px;
+}
+
+#about .row1 .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid white;
+    background-color: rgb(207, 224, 224);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.11);
+}
+
+#about .row1 .content {
+    flex: 1 1 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#about .row1 .content .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#about .row1 .content .box-container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* -------------skeels section style ----------------------*/
+
+#skills .row2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills .row2 .skills {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 15px;
+    z-index: -1;
+}
+
+#skills .row2 .skills .progress {
+    padding: 10px 0;
+}
+
+#skills .row2 .skills .progress h4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#skills .row2 .skills .progress .bar {
+    width: 100%;
+    height: 10px;
+    margin-top: 5px;
+    background-color: #c7c3bb;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#skills .row2 .skills .progress .bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--orange);
+}
+
+#skills .row2 .skills .progress:nth-child(2) .bar::after {
+    width: 80%;
+}
+
+#skills .row2 .skills .progress:nth-child(3) .bar::after {
+    width: 75%;
+}
+
+#skills .row2 .box-container {
+    flex: 1 1 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 15px;
+}
+
+#skills .row2 .box-container .box {
+    width: 48%;
+    background-color: white;
+    flex: 1 1 200px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#skills .row2 .box-container .box h3 {
+    color: var(--orange);
+    font-size: 3.5rem;
+}
+
+
+/* -------------services section style ----------------------*/
+
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services .container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 250px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.services .container .box {
+    font-size: 1rem;
+}
+
+.services .container .box i {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--orange);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+
+
+/* -------------services section style ----------------------*/
+
+.experiences .container {
+    margin-top: 40px;
+}
+
+.experiences .container .box {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+
+.experiences .container .box::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: var(--orange);
+    border-radius: 20px;
+    position: absolute;
+}
+
+.experiences .container .box::after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: var(--orange);
+    position: absolute;
+    left: 7px;
+}
+
+.experiences .container .box .content {
+    width: 100%;
+    max-width: 910px;
+    padding: 20px 20px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.experiences .container .box .content h4 {
+    width: 130px;
+    border-radius: 100px;
+    text-align: center;
+    background-color: var(--orange);
+    color: white;
+}
+
+.experiences .container .box .content h2 {
+    margin: 7px 0;
+}
+
+
+
+
+/* ---------------------------------portfolio----------------------------------- */
+
+
+.portfolio .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio .projects .project {
+    display: flex;
+    flex: 1 1 250px;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    position: relative;
+}
+
+.portfolio .projects .project .expand {
+    width: 100%;
+    height: 100%;
+    background-color: #00000041;
+    position: absolute;
+    padding-bottom: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.portfolio .projects .project .expand i {
+    color: var(--white);
+}
+
+.portfolio .projects .project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio .projects .project .about {
+    position: absolute;
+    bottom: -100%;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 3px solid var(--orange);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.portfolio .projects .project:hover .expand {
+    opacity: 1;
+}
+
+.portfolio .projects .project:hover .about {
+    bottom: 0;
+}
+
+.portfolio .projects .project .about p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.portfolio .projects .project .about a {
+    padding: 2px 5px;
+    background-color: var(--orange);
+    border-radius: 7px;
+    margin: 5px 0;
+}
+
+.portfolio .projects .project .about a:hover {
+    opacity: .95;
+    transform: scale(0.97);
+}
+
+div.fullDisplay {
+    width: 100%;
+    height: 100vh;
+    background-color: #141a187c;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+div.fullDisplay .close{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: var(--white);
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+div.fullDisplay .photo {
+    display: flex;
+    padding: 10px;
+    height: 100vh;
+}
+
+div.fullDisplay .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    overflow: auto;
+}
+
+div.fullDisplay .photos::-webkit-scrollbar {
+    height: 7px;
+}
+
+div.fullDisplay .photos {
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+}
+
+div.fullDisplay .photos .slider {
+    display: flex;
+    gap: 10px;
+    opacity: 0.7;
+    padding: 5px 0;
+}
+
+div.fullDisplay .photos .slider:hover{
+    opacity: 1;
+}
+
+div.fullDisplay .photos img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: 1px solid transparent;
+    box-shadow: 2px 2px 10px #0000004f;
+}
+
+div.fullDisplay .photos img:hover {
+    opacity: .7;
+    transform: translateY(-10px);
+}
+
+
+
+
+
+
+
+/* ------------------------------ contact section ------------------------------ */
+
+.contactMe .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contactMe .info .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 200px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contactMe .info .box i {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--orange);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.contactMe .form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.contactMe .form form {
+    padding: 10px 20px;
+    flex: 1 1 300px;
+    background-color: white;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contactMe .form form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactMe .form form .inputs input,
+.contactMe .form form .inputs textarea {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid var(--balck);
+    padding: 5px 10px;
+}
+
+.contactMe .form form .inputs textarea {
+    flex-grow: 1;
+}
+
+.contactMe .form iframe {
+    flex: 1 1 50px;
+    border: 7px solid white;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ------------------------------ cursor style ------------------------------ */
+
+.cursor1,
+.cursor2 {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    height: 9px;
+    width: 9px;
+    background: var(--bllue);
+    border: solid 2px transparent;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: 1000000001;
+    transition: 0s;
+}
+
+.cursor2 {
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border-color: var(--bllue);
+    transition: 100ms;
+    z-index: 1000000000;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.199);
+}
+
+
+/* ------------------------------ menu button style ------------------------------ */
+
+#menuButton {
+    position: fixed;
+    width: 39px;
+    top: 10px;
+    right: 10px;
+    padding: 6px 0px;
+    text-align: center;
+    background: var(--orange);
+    font-size: 1.7rem;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000000;
+    display: none;
+}
+
+
+
+/* ------------------------------ buttons style ------------------------------ */
+
+.btn {
+    padding: 5px 10px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: solid 2px var(--orange);
+    text-align: center;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 5px;
+}
+
+.btn:hover {
+    color: var(--white);
+    background-color: var(--balck);
+}
+
+
+/* ------------------------------ Media queri ------------------------------ */
+
+@media (width<1300px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    #menuButton {
+        display: initial;
+    }
+
+    aside {
+        left: -320px;
+    }
+
+    aside.active {
+        left: 0%;
+    }
+}
+
+@media (width<620px) {
+    * {
+        cursor: auto;
+    }
+
+    aside {
+        width: 100%;
+        left: -100%;
+    }
+
+    .cursor1,
+    .cursor2 {
+        display: none;
+    }
+}
